@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background-color: #0b0f19;
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+}
+
+.app-shell {
+  background-color: #020617;
+  color: #f1f5f9;
+}
+
+.app-shell[data-theme="light"] {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.app-shell[data-theme="light"] [class*="bg-slate-950"] {
+  background-color: #f8fafc;
+}
+
+.app-shell[data-theme="light"] [class*="bg-slate-900"] {
+  background-color: #ffffff;
+}
+
+.app-shell[data-theme="light"] [class*="bg-slate-800"] {
+  background-color: #e2e8f0;
+}
+
+.app-shell[data-theme="light"] [class*="bg-slate-700"] {
+  background-color: #cbd5e1;
+}
+
+.app-shell[data-theme="light"] [class*="border-slate-800"],
+.app-shell[data-theme="light"] [class*="border-slate-700"] {
+  border-color: #cbd5e1;
+}
+
+.app-shell[data-theme="light"] [class*="divide-slate-800"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #cbd5e1;
+}
+
+.app-shell[data-theme="light"] [class*="text-slate-100"],
+.app-shell[data-theme="light"] [class*="text-slate-200"],
+.app-shell[data-theme="light"] [class*="text-slate-300"],
+.app-shell[data-theme="light"] [class*="text-white"]:not([class*="bg-blue-"]) {
+  color: #0f172a;
+}
+
+.app-shell[data-theme="light"] [class*="text-slate-400"] {
+  color: #475569;
+}
+
+.app-shell[data-theme="light"] [class*="text-slate-500"],
+.app-shell[data-theme="light"] [class*="text-slate-600"] {
+  color: #64748b;
+}
+
+.app-shell[data-theme="light"] [class*="placeholder-slate-500"]::placeholder {
+  color: #64748b;
+}
+
+.app-shell[data-theme="light"] [class*="hover:bg-slate-800"]:hover,
+.app-shell[data-theme="light"] [class*="hover:bg-slate-700"]:hover {
+  background-color: #e2e8f0;
+}
+
+.app-shell[data-theme="light"] [class*="hover:text-white"]:hover,
+.app-shell[data-theme="light"] [class*="hover:text-slate-200"]:hover {
+  color: #0f172a;
+}
+
+.app-shell[data-theme="dark"] {
+  background-color: #000000;
+  color: #f8fafc;
+}
+
+.app-shell[data-theme="dark"] [class*="bg-slate-950"] {
+  background-color: #000000;
+}
+
+.app-shell[data-theme="dark"] [class*="bg-slate-900"] {
+  background-color: #09090b;
+}
+
+.app-shell[data-theme="dark"] [class*="bg-slate-800"] {
+  background-color: #18181b;
+}
+
+.app-shell[data-theme="dark"] [class*="border-slate-800"],
+.app-shell[data-theme="dark"] [class*="border-slate-700"] {
+  border-color: #27272a;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-shell,
+  .app-shell * {
+    transition-property: background-color, border-color, color;
+    transition-duration: 150ms;
+  }
+}

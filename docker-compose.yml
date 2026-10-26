@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: apexalpha-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Admin123
+      POSTGRES_DB: financial_research
+    ports:
+      - "5433:5432"
+    volumes:
+      - apex_pgdata:/var/lib/postgresql/data
+
+volumes:
+  apex_pgdata:
